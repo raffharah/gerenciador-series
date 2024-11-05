@@ -1,4 +1,5 @@
 @extends('layout')
+
 @section('cabecalho')
     Adicionar Série
 @endsection
@@ -13,12 +14,15 @@
             </ul>
         </div>
     @endif
-    <form method="post">
+
+    <form method="POST" action="{{ route('series.store') }}">
         @csrf
         <div class="form-group">
             <label for="nome">Nome</label>
             <input type="text" class="form-control" name="nome" id="nome">
         </div>
-        <button class="btn btn-primary"><i class="fa-solid fa-plus"></i> Adicionar</button>
+        <button class="btn btn-primary">
+            <i class="fa-solid fa-plus"></i> Adicionar
+        </button>
     </form>
 @endsection

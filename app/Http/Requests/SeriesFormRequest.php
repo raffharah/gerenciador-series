@@ -28,7 +28,7 @@ class SeriesFormRequest extends FormRequest
     public function messages()
     {
         return [
-          'required' => 'O campo :attribute é obrigatório',
+            'required' => 'O campo :attribute é obrigatório',
             'nome.min' => 'O campo nome deve ter pelo menos 2 caracteres',
         ];
     }
